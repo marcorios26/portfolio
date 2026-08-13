@@ -1,0 +1,40 @@
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="section-eyebrow">disponible para nuevos retos</p>
+      <h1 class="hero-title">
+        Construyo software bancario
+        <span class="hero-title-accent">a prueba de fallos.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Software Engineer especializado en <strong>Java, Spring Boot y Angular</strong>,
+        enfocado en arquitectura limpia para sistemas financieros de alto rendimiento.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contacto">Contactar</a>
+        <a class="btn btn-ghost" href="#experiencia">Ver experiencia</a>
+      </div>
+    </div>
+
+    <div class="terminal" role="img" aria-label="Terminal mostrando el comando whoami con los datos de Marco Ríos">
+      <div class="terminal-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-amber"></span>
+        <span class="dot dot-green"></span>
+        <span class="terminal-title mono">marco&#64;portfolio: ~</span>
+      </div>
+      <div class="terminal-body mono">
+        @for (line of printedLines(); track line.text) {
+          <p class="terminal-line" [class.is-command]="line.prefix === '$'">
+            <span class="terminal-prefix">{{ line.prefix }}</span> {{ line.text }}
+          </p>
+        }
+        @if (typingText() || printedLines().length < 5) {
+          <p class="terminal-line" [class.is-command]="currentPrefix === '$'">
+            <span class="terminal-prefix">{{ currentPrefix }}</span> {{ typingText() }}<span class="cursor">▍</span>
+          </p>
+        }
+      </div>
+    </div>
+  </div>
+</section>

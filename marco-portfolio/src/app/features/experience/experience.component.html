@@ -1,0 +1,40 @@
+<section class="section" id="experiencia">
+  <p class="section-eyebrow">experiencia</p>
+  <h2 class="section-title">git log --author="Marco Ríos"</h2>
+
+  <ol class="log">
+    @for (exp of experiences; track exp.slug) {
+      <li class="commit">
+        <div class="commit-head">
+          <span class="commit-hash mono">commit {{ exp.slug }}</span>
+          <span class="commit-period mono">{{ exp.period }}</span>
+        </div>
+        <h3 class="commit-title">{{ exp.company }} <span class="commit-role">— {{ exp.role }}</span></h3>
+        <p class="commit-summary">{{ exp.summary }}</p>
+
+        <ul class="commit-highlights">
+          @for (item of exp.highlights; track item) {
+            <li>
+              <span class="mono diff-add">+</span> {{ item }}
+            </li>
+          }
+        </ul>
+
+        @if (exp.metrics.length) {
+          <div class="commit-metrics">
+            @for (metric of exp.metrics; track metric.label) {
+              <span class="mono" [class]="'diff-' + metric.kind">{{ metric.value }}</span>
+              <span class="commit-metric-label">{{ metric.label }}</span>
+            }
+          </div>
+        }
+
+        <div class="commit-stack">
+          @for (tech of exp.stack; track tech) {
+            <span class="chip">{{ tech }}</span>
+          }
+        </div>
+      </li>
+    }
+  </ol>
+</section>

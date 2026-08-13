@@ -1,0 +1,24 @@
+<section class="section" id="habilidades">
+  <p class="section-eyebrow">habilidades técnicas</p>
+  <h2 class="section-title">import {{ '{' }} stack {{ '}' }} from './marco'</h2>
+
+  <div class="filter-bar" role="group" aria-label="Filtrar habilidades por categoría">
+    @for (cat of categories; track cat.id) {
+      <button
+        type="button"
+        class="filter-btn mono"
+        [class.is-active]="selectedCategory() === cat.id"
+        [attr.aria-pressed]="selectedCategory() === cat.id"
+        (click)="select(cat.id)"
+      >
+        {{ cat.label }}
+      </button>
+    }
+  </div>
+
+  <ul class="skill-list" aria-live="polite">
+    @for (skill of filteredSkills(); track skill.name) {
+      <li class="skill-tag chip">{{ skill.name }}</li>
+    }
+  </ul>
+</section>

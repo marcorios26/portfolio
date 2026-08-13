@@ -1,0 +1,25 @@
+<section class="section" id="proyectos">
+  <p class="section-eyebrow">proyectos destacados</p>
+  <h2 class="section-title">Pull requests que dejaron huella</h2>
+
+  <div class="project-grid">
+    @for (project of projects; track project.id) {
+      <article class="project-card">
+        <div class="project-card-head">
+          <span class="pr-badge mono">
+            <span class="diff-add">●</span> merged
+          </span>
+          <span class="project-id mono">#{{ project.id }}</span>
+        </div>
+        <h3 class="project-name">{{ project.name }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        <p class="project-impact mono"><span class="diff-add">impact:</span> {{ project.impact }}</p>
+        <div class="project-tags">
+          @for (tag of project.tags; track tag) {
+            <span class="chip">{{ tag }}</span>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

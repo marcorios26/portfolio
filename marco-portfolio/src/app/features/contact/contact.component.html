@@ -1,0 +1,54 @@
+<section class="section" id="contacto">
+  <p class="section-eyebrow">contacto</p>
+  <h2 class="section-title">¿Construimos algo juntos?</h2>
+
+  <div class="contact-grid">
+    <form class="contact-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <div class="field">
+        <label for="name" class="mono">nombre</label>
+        <input id="name" type="text" formControlName="name" [class.invalid]="fieldInvalid('name')" />
+        @if (fieldInvalid('name')) {
+          <p class="error mono">requerido, mínimo 2 caracteres</p>
+        }
+      </div>
+
+      <div class="field">
+        <label for="email" class="mono">email</label>
+        <input id="email" type="email" formControlName="email" [class.invalid]="fieldInvalid('email')" />
+        @if (fieldInvalid('email')) {
+          <p class="error mono">ingresa un email válido</p>
+        }
+      </div>
+
+      <div class="field">
+        <label for="message" class="mono">mensaje</label>
+        <textarea id="message" rows="4" formControlName="message" [class.invalid]="fieldInvalid('message')"></textarea>
+        @if (fieldInvalid('message')) {
+          <p class="error mono">cuéntame un poco más (mín. 10 caracteres)</p>
+        }
+      </div>
+
+      @if (status() !== 'sent') {
+        <button type="submit" class="btn btn-primary" [disabled]="status() === 'sending'">
+          {{ status() === 'sending' ? 'enviando…' : 'enviar mensaje' }}
+        </button>
+      } @else {
+        <div class="sent-confirmation">
+          <p class="mono diff-add">✓ listo — abre tu correo para completar el envío</p>
+          <a class="btn btn-ghost" [href]="mailtoHref">Abrir en mi correo</a>
+        </div>
+      }
+    </form>
+
+    <aside class="contact-direct">
+      <p class="contact-direct-label mono">canales directos</p>
+      <a class="direct-link" [href]="'mailto:' + profile.email">
+        <span class="mono diff-add">→</span> {{ profile.email }}
+      </a>
+      <a class="direct-link" [href]="profile.linkedin" target="_blank" rel="noopener">
+        <span class="mono diff-add">→</span> LinkedIn
+      </a>
+      <p class="contact-location mono">{{ profile.location }}</p>
+    </aside>
+  </div>
+</section>

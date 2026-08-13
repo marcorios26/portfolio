@@ -1,0 +1,91 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+input, textarea {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  padding: 11px 14px;
+  resize: vertical;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--link);
+}
+
+input.invalid, textarea.invalid {
+  border-color: var(--diff-remove);
+}
+
+.error {
+  color: var(--diff-remove);
+  font-size: 12px;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sent-confirmation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-direct {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  align-self: start;
+}
+
+.contact-direct-label {
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+
+.direct-link {
+  color: var(--text-primary);
+  font-size: 14.5px;
+}
+.direct-link:hover { text-decoration: none; color: var(--link); }
+
+.contact-location {
+  color: var(--text-tertiary);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}

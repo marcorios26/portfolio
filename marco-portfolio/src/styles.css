@@ -1,0 +1,141 @@
+/* ============================================================
+   DESIGN TOKENS — Identidad "Ledger & Diff"
+   Concepto: la carrera de Marco está narrada en métricas de
+   commits/PRs (-50% tiempo de atención, +40% eficiencia). El
+   lenguaje visual toma prestado el vocabulario de una terminal
+   y un diff de control de versiones: verde para lo que mejora,
+   coral para lo que se reduce, azul para lo interactivo.
+   ============================================================ */
+:root {
+  /* Superficies */
+  --bg: #0a0e14;
+  --bg-panel: #10151f;
+  --bg-panel-alt: #141b28;
+  --border: #212a38;
+  --border-soft: #1a2230;
+
+  /* Texto */
+  --text-primary: #e7ebf3;
+  --text-secondary: #8a94a6;
+  --text-tertiary: #5b6472;
+
+  /* Acentos */
+  --diff-add: #34d399;
+  --diff-add-dim: #1f4a3c;
+  --diff-remove: #fb7185;
+  --diff-remove-dim: #4a1f2a;
+  --link: #6c8dff;
+  --amber: #f0b429;
+
+  /* Tipografía */
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Espaciado / layout */
+  --max-w: 1080px;
+  --radius: 8px;
+  --radius-sm: 4px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0; }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.section {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 88px 24px;
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--diff-add);
+  margin-bottom: 12px;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--diff-add);
+  box-shadow: 0 0 8px var(--diff-add);
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 38px);
+  color: var(--text-primary);
+  margin-bottom: 40px;
+}
+
+.mono { font-family: var(--font-mono); }
+
+.diff-add { color: var(--diff-add); }
+.diff-remove { color: var(--diff-remove); }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-panel);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .section { padding: 56px 20px; }
+}

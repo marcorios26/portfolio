@@ -1,0 +1,17 @@
+<section class="section" id="sobre-mi">
+  <p class="section-eyebrow">sobre mí</p>
+  <h2 class="section-title">Ingeniería enfocada en banca y sistemas de alto impacto</h2>
+
+  <div class="about-grid">
+    <p class="about-summary">{{ summary }}</p>
+
+    <ul class="metrics" aria-label="Métricas clave de impacto">
+      @for (metric of metrics; track metric.label) {
+        <li class="metric">
+          <span class="metric-value mono" [class]="'diff-' + metric.kind">{{ metric.value }}</span>
+          <span class="metric-label">{{ metric.label }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
