@@ -1,3 +1,4 @@
 [build]
+  base = "marco-rios-portfolio"
   command = "npm run build"
   publish = "dist/marco-rios-portfolio"
