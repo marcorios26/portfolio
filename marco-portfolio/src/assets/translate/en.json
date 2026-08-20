@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "about": "about",
+    "experience": "experience",
+    "projects": "projects",
+    "skills": "skills",
+    "contact": "contact"
+  },
+  "hero": {
+    "eyebrow": "open to new challenges",
+    "title_line1": "I build banking software",
+    "title_accent": "that doesn't break.",
+    "subtitle": "Software Engineer specialized in Java, Spring Boot and Angular, focused on clean architecture for high-performance financial systems.",
+    "cta_contact": "Contact",
+    "cta_experience": "View experience",
+    "cta_download_cv": "Download CV"
+  },
+  "about": {
+    "eyebrow": "about me",
+    "title": "Engineering focused on banking and high-impact systems"
+  },
+  "experience": {
+    "eyebrow": "experience",
+    "title": "git log --author=\"Marco Rios\""
+  },
+  "projects": {
+    "eyebrow": "featured projects",
+    "title": "Pull requests that made an impact",
+    "merged": "merged",
+    "impact": "impact:"
+  },
+  "skills": {
+    "eyebrow": "technical skills",
+    "filter_all": "All",
+    "filter_frontend": "Frontend",
+    "filter_backend": "Backend",
+    "filter_devops": "DB & DevOps"
+  },
+  "contact": {
+    "eyebrow": "contact",
+    "title": "Let's build something together?",
+    "label_name": "name",
+    "label_email": "email",
+    "label_message": "message",
+    "error_name": "required, minimum 2 characters",
+    "error_email": "enter a valid email",
+    "error_message": "tell me a bit more (min. 10 characters)",
+    "submit": "send message",
+    "sending": "sending…",
+    "sent": "✓ done — open your email client to finish sending",
+    "open_mail": "Open in my email",
+    "direct_channels": "direct channels"
+  },
+  "footer": {
+    "made_with": "made with Angular 17 (Standalone + Signals)"
+  }
+}

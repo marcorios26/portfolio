@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
-
+import {downloadFile} from '../../shared/download-file';
+import { TranslatePipe } from '@ngx-translate/core';
 interface TerminalLine {
   prefix: string;
   text: string;
@@ -9,6 +10,7 @@ interface TerminalLine {
 @Component({
   selector: 'app-hero',
   standalone: true,
+  imports: [TranslatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
@@ -65,4 +67,9 @@ export class HeroComponent implements OnInit, OnDestroy {
     const nextIndex = this.printedLines().length;
     return this.script[nextIndex]?.prefix ?? '>';
   }
+
+  downloadCv(): void {
+  downloadFile('assets/Curriculum - Marco Rios 2026.pdf', 'CV-Marco-Antonio-Rios-Ramos.pdf');
+}
+  
 }

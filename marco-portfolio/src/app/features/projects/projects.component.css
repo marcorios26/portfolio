@@ -54,6 +54,10 @@
   font-size: 13px;
   color: var(--text-secondary);
 }
+.project-repo {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
 
 .project-tags {
   display: flex;

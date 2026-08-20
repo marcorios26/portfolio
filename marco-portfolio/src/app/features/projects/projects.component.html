@@ -5,14 +5,29 @@
   <div class="project-grid">
     @for (project of projects; track project.id) {
       <article class="project-card">
+         
         <div class="project-card-head">
           <span class="pr-badge mono">
             <span class="diff-add">●</span> merged
           </span>
           <span class="project-id mono">#{{ project.id }}</span>
         </div>
+        @if (project.imageUrl) {
+          <img
+            [ngSrc]="project.imageUrl"
+            [alt]="project.name"
+            width="480"
+            height="220"
+            class="project-image"
+          />
+        }
         <h3 class="project-name">{{ project.name }}</h3>
         <p class="project-description">{{ project.description }}</p>
+        
+        @if(project.repositoryUrl) {
+          <p class="project-repo mono"><span class="diff-add">Repositorio:</span> <a href="{{ project.repositoryUrl }}" target="_blank" rel="noopener noreferrer">{{ project.repositoryUrl }}</a></p>
+        }
+        
         <p class="project-impact mono"><span class="diff-add">impact:</span> {{ project.impact }}</p>
         <div class="project-tags">
           @for (tag of project.tags; track tag) {

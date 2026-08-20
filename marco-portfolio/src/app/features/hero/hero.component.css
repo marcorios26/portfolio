@@ -56,6 +56,14 @@
   background: transparent;
   color: var(--text-primary);
 }
+.btn-ghostCv {
+  border-color: #FB6F84; color: #FB6F84;
+}
+.btn-ghostCv:hover {
+  background: transparent;
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
 .btn-ghost:hover { border-color: var(--link); color: var(--link); }
 
 /* Terminal */

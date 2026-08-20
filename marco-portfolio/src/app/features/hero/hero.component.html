@@ -1,18 +1,20 @@
 <section class="hero" id="inicio">
   <div class="hero-inner">
     <div class="hero-copy">
-      <p class="section-eyebrow">disponible para nuevos retos</p>
+      <p class="section-eyebrow">{{ 'hero.eyebrow' | translate }}</p>
       <h1 class="hero-title">
-        Construyo software bancario
-        <span class="hero-title-accent">a prueba de fallos.</span>
+        Construyo software robusto, escalable y orientado a 
+        <span class="hero-title-accent">negocio.</span>
       </h1>
       <p class="hero-subtitle">
-        Software Engineer especializado en <strong>Java, Spring Boot y Angular</strong>,
-        enfocado en arquitectura limpia para sistemas financieros de alto rendimiento.
+        Software Engineer especializado en <strong>Java, Spring Boot y Angular </strong>, con experiencia construyendo y manteniendo aplicaciones empresariales, APIs y arquitecturas basadas en microservicios.
+        Me enfoco en crear soluciones mantenibles, eficientes y preparadas para crecer, desde el backend hasta la experiencia frontend.
+
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contacto">Contactar</a>
         <a class="btn btn-ghost" href="#experiencia">Ver experiencia</a>
+        <a class="btn btn-ghostCv" (click)="downloadCv()">Descargar CV</a>
       </div>
     </div>
 

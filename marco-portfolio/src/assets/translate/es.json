@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "about": "sobre-mi",
+    "experience": "experiencia",
+    "projects": "proyectos",
+    "skills": "habilidades",
+    "contact": "contacto"
+  },
+  "hero": {
+    "eyebrow": "disponible para nuevos retos",
+    "title_line1": "Construyo software bancario",
+    "title_accent": "a prueba de fallos.",
+    "subtitle": "Software Engineer especializado en Java, Spring Boot y Angular, enfocado en arquitectura limpia para sistemas financieros de alto rendimiento.",
+    "cta_contact": "Contactar",
+    "cta_experience": "Ver experiencia",
+    "cta_download_cv": "Descargar CV"
+  },
+  "about": {
+    "eyebrow": "sobre mí",
+    "title": "Ingeniería enfocada en banca y sistemas de alto impacto"
+  },
+  "experience": {
+    "eyebrow": "experiencia",
+    "title": "git log --author=\"Marco Ríos\""
+  },
+  "projects": {
+    "eyebrow": "proyectos destacados",
+    "title": "Pull requests que dejaron huella",
+    "merged": "merged",
+    "impact": "impact:"
+  },
+  "skills": {
+    "eyebrow": "habilidades técnicas",
+    "filter_all": "Todas",
+    "filter_frontend": "Frontend",
+    "filter_backend": "Backend",
+    "filter_devops": "DB & DevOps"
+  },
+  "contact": {
+    "eyebrow": "contacto",
+    "title": "¿Construimos algo juntos?",
+    "label_name": "nombre",
+    "label_email": "email",
+    "label_message": "mensaje",
+    "error_name": "requerido, mínimo 2 caracteres",
+    "error_email": "ingresa un email válido",
+    "error_message": "cuéntame un poco más (mín. 10 caracteres)",
+    "submit": "enviar mensaje",
+    "sending": "enviando…",
+    "sent": "✓ listo — abre tu correo para completar el envío",
+    "open_mail": "Abrir en mi correo",
+    "direct_channels": "canales directos"
+  },
+  "footer": {
+    "made_with": "hecho con Angular 17 (Standalone + Signals)"
+  }
+}

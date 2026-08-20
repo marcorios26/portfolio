@@ -36,7 +36,7 @@ export const EXPERIENCES: Experience[] = [
     metrics: [
       { label: 'tiempo de atención en Carpeta Digital / DPF', value: '-50%', kind: 'remove' }
     ],
-    stack: ['Java', 'Spring Boot', 'Angular', 'SQL Server', 'Clean Code', 'SOLID']
+    stack: ['Java', 'Spring Boot', 'Angular', 'T-SQL', 'Clean Code', 'SOLID', 'Docker']
   },
   {
     company: 'Jalasoft',
@@ -53,7 +53,7 @@ export const EXPERIENCES: Experience[] = [
     metrics: [
       { label: 'eficiencia en gestión de casos de prueba', value: '+40%', kind: 'add' }
     ],
-    stack: ['Microservicios', 'DDD', 'Redux', 'WebSockets', 'Docker']
+    stack: ['Microservicios', 'DDD', 'Redux', 'WebSockets', 'Docker', 'React', 'Java', 'Spring Boot']
   },
   {
     company: 'Fundación Jala',
@@ -68,7 +68,7 @@ export const EXPERIENCES: Experience[] = [
       'Colaboración directa en definición de contratos de API.'
     ],
     metrics: [],
-    stack: ['Microservicios', 'Angular', 'React', 'Swagger']
+    stack: ['Microservicios', 'React', 'Swagger', 'Java', 'Spring Boot']
   }
 ];
 
@@ -80,25 +80,41 @@ export const PROJECTS: Project[] = [
     description:
       'Plataforma de gestión documental digital para clientes bancarios, integrada con servicios Java/Spring Boot y una interfaz Angular pensada para operadores de atención.',
     impact: '-50% en tiempo de atención al cliente',
+    repositoryUrl: 'https://github.com/marcorios26/NCWings',
     tags: ['Angular', 'Spring Boot', 'SQL Server']
   },
   {
-    id: 'sistema-dpf',
-    name: 'Sistema DPF',
+    id: 'Gestionador de Blogs y Autores',
+    name: 'Gestionador de Blogs y Autores',
+    imageUrl: 'assets/images/projects/blog.png',  
     status: 'merged',
     description:
-      'Módulo de administración de Depósitos a Plazo Fijo, con reglas de negocio bancarias y optimización de consultas mediante stored procedures.',
+      'Backend REST API para un blog, permitiendo gestionar autores, blogs y comentarios',
     impact: 'Procesos más rápidos y trazables para el equipo de negocio',
+    repositoryUrl: 'https://github.com/marcorios26/Administrador-de-autores-blogs-y-comentarios.',
     tags: ['Java', 'Spring Boot', 'SQL', 'Clean Architecture']
   },
   {
-    id: 'gestion-testing',
-    name: 'Gestión de Testing',
+    id: 'La Paz Parking ',
+    name: 'La Paz Parking ',
+    imageUrl: 'assets/images/projects/LaPazParking.jpg',  
     status: 'merged',
     description:
-      'Sistema CRUD para casos de prueba con arquitectura DDD, estado centralizado en Redux y notificaciones en tiempo real vía WebSockets.',
+      'Aplicacion movil para la gestion de parqueos en la ciudad de La Paz, Bolivia, permitiendo a los usuarios encontrar y reservar espacios de estacionamiento de manera eficiente.',
+    impact: 'reduce el tiempo de búsqueda de estacionamiento en un 30%',
+    repositoryUrl: 'https://gitlab.com/marcorios26/lp/-/tree/develop',
+    tags: ['React Native', 'MaterialUI', 'TypeScript', 'PostgreSQL','Java','Spring Boot']
+  },
+   {
+    id: 'wings',
+    name: 'NCWings',
+    imageUrl: 'assets/images/projects/NCWings.jpg',
+    status: 'merged',
+    description:
+      'NCWings fue desarrollado como un proyecto enfocado en simular el funcionamiento de una aerolínea. Permite a los usuarios explorar destinos, seleccionar vuelos y realizar reservas de manera intuitiva.',
     impact: '+40% de eficiencia operativa',
-    tags: ['DDD', 'Redux', 'WebSockets', 'Docker']
+    repositoryUrl: 'https://github.com/marcorios26/NCWings',
+    tags: ['React', 'Java ', 'Spring Boot', 'TypeScript', 'HTML', 'CSS', 'MySQL', 'Git']
   }
 ];
 
